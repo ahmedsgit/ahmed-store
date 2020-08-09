@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="resources/style.css">
     <title>Ahmed's Store</title>
     <link rel="shortcut icon" href="resources/img/logo/storeLogo.png" type="image/png">
@@ -37,11 +38,53 @@
                                 <span>Our Service</span> </h2>
                             <p>
                                 <span>Find Your software, Download it for free. </span>
-                                <span><a href="#">Registration</a> Now! </span>
+                                <span><a href="#" id="registration">Registration</a> Now! </span>
                                 <span>Have a Account? Then Login 😄</span>
                             </p>
-                            <button class="btn">Login</button>
+                            <button class="btn" id="login">Login</button>
                         </div>
+                    </div>
+                    <div class="popup" id="popup">
+                        <form id="popup-registration" class="registration">
+                            <h2>Registration</h2>
+                            <i class="fa fa-close" id="close-registration"></i>
+                            <div class="form-control">
+                                <label for="username">Username</label>
+                                <input type="text" id="username" placeholder="Enter Username">
+                                <small>Error Message</small>
+                            </div>
+                            <div class="form-control">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="Enter Email">
+                                <small>Error Message</small>
+                            </div>
+                            <div class="form-control">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" placeholder="Enter Password">
+                                <small>Error Message</small>
+                            </div>
+                            <div class="form-control">
+                                <label for="password2">Confirm Password</label>
+                                <input type="password" id="password2" placeholder="Enter Password Again">
+                                <small>Error Message</small>
+                            </div>
+                            <button type="submit">Registration</button>
+                        </form>
+                        <form id="popup-login" class="login">
+                            <h2>Login</h2>
+                            <i class="fa fa-close" id="close-login"></i>
+                            <div class="form-control">
+                                <label for="username">Username</label>
+                                <input type="text" id="login-username" placeholder="Enter Username">
+                                <small>Error Message</small>
+                            </div>
+                            <div class="form-control">
+                                <label for="password">Password</label>
+                                <input type="password" id="login-password" placeholder="Enter Password">
+                                <small>Error Message</small>
+                            </div>
+                            <button type="submit">Login</button>
+                        </form>
                     </div>
                 </header>
             </div>
@@ -67,6 +110,7 @@
             </ul>
         </div>
     </div>
+
 
     <script src="resources/script.js"></script>
 </body>

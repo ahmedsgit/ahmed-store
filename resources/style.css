@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+:root {
+  --success-color: #2ecc71;
+  --error-color: #e74c3c;
+}
+
 body,
 button {
   font-family: "Poppins", sans-serif;
@@ -17,6 +22,7 @@ button {
   background: #108dc7;
   overflow-x: hidden;
   transform-style: preserve-3d;
+  position: relative;
 }
 
 .container.orca {
@@ -420,4 +426,153 @@ ul {
 
 .container.active .main:hover {
   transform: perspective(1300px) rotateY(20deg) translateZ(340px) scale(0.5);
+}
+
+/* popup */
+.popup {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  color: #fff;
+}
+
+.login {
+  display: none;
+}
+.registration {
+  display: none;
+}
+.registration,
+.login {
+  background: rgba(7, 18, 13, 0.7);
+  position: relative;
+  width: 450px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 7px rgba(43, 110, 80, 0.7);
+  border-radius: 5px;
+  padding: 35px 30px;
+}
+
+.registration h2,
+.login h2 {
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.registration i,
+.login i {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #f0f0f0;
+  transition: color 0.5s ease, transform 0.5 ease;
+}
+.registration i:hover,
+.login i:hover {
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.registration i:active,
+.login i:active {
+  transform: scale(0.98);
+}
+
+.registration .form-control,
+.login .form-control {
+  position: relative;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+.registration .form-control label,
+.login .form-control label {
+  color: #eaf7fb;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.registration .form-control input,
+.login .form-control input {
+  border: 1px solid #f0f0f0;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.registration .form-control input:focus,
+.login .form-control input:focus {
+  outline: 0;
+  border-color: #777;
+  transform: translate(-2px);
+  transition: transform 0.1s;
+}
+
+.registration .form-control.success input,
+.login .form-control.success input {
+  border-color: var(--success-color);
+}
+
+.registration .form-control.error input,
+.login .form-control.error input {
+  border-color: var(--error-color);
+}
+
+.registration .form-control small,
+.login .form-control small {
+  color: var(--error-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.registration .form-control.error small,
+.login .form-control.error small {
+  visibility: visible;
+}
+.registration button,
+.login button {
+  cursor: pointer;
+  border-radius: 3px;
+  color: #fff;
+  padding: 5px;
+  font-size: 16px;
+  margin-top: 20px;
+  width: 100%;
+  display: block;
+  letter-spacing: 1px;
+}
+.registration button:focus,
+.login button:focus {
+  outline: none;
+}
+.registration button[type="submit"],
+.login button[type="submit"] {
+  background: #218bab;
+  border: 2px solid #218bab;
+}
+
+.registration button[type="submit"]:hover,
+.login button[type="submit"]:hover {
+  background: #186881;
+  border: 2px solid #186881;
+  transition: all 0.3s ease;
 }
