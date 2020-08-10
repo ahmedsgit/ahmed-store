@@ -38,6 +38,7 @@ button {
   background: linear-gradient(to right, #191654, #43c6ac);
   font-family: "Chilanka", cursive;
 }
+
 .container.deepSeaSpace {
   background: #2c3e50;
   background: -webkit-linear-gradient(to right, #4ca1af, #2c3e50);
@@ -79,6 +80,7 @@ button {
   text-decoration: none;
   color: #3d9970;
 }
+
 .logo span:last-of-type {
   color: #fff;
   font-weight: 100;
@@ -213,6 +215,7 @@ header {
   letter-spacing: 3px;
   border: 1px solid #3d9970;
 }
+
 .btn:hover {
   color: #fff;
   transform: scale(1.1);
@@ -299,9 +302,11 @@ ul {
   opacity: 1;
   animation: sub-show 0.5s forwards ease-in;
 }
+
 .sub-link li {
   color: #d9d9d9;
 }
+
 .sub-link li:hover {
   color: #fff;
 }
@@ -310,6 +315,7 @@ ul {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -319,6 +325,7 @@ ul {
   from {
     opacity: 1;
   }
+
   to {
     opacity: 0;
   }
@@ -330,6 +337,7 @@ ul {
 .deepSeaSpace {
   cursor: pointer;
 }
+
 .links a:hover {
   color: #fff;
 }
@@ -343,6 +351,7 @@ ul {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0px);
@@ -354,6 +363,7 @@ ul {
     opacity: 1;
     transform: translateY(0px);
   }
+
   to {
     opacity: 0;
     transform: translateY(10px);
@@ -448,9 +458,11 @@ ul {
 .login {
   display: none;
 }
+
 .registration {
   display: none;
 }
+
 .registration,
 .login {
   background: rgba(7, 18, 13, 0.7);
@@ -472,15 +484,16 @@ ul {
 
 .registration i,
 .login i {
+  cursor: pointer;
   position: absolute;
   top: 0;
   right: 0;
   padding: 10px;
-  cursor: pointer;
   font-size: 20px;
   color: #f0f0f0;
   transition: color 0.5s ease, transform 0.5 ease;
 }
+
 .registration i:hover,
 .login i:hover {
   color: #fff;
@@ -495,7 +508,7 @@ ul {
 .registration .form-control,
 .login .form-control {
   position: relative;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
   width: 100%;
 }
 
@@ -504,11 +517,12 @@ ul {
   color: #eaf7fb;
   display: block;
   margin-bottom: 5px;
+  padding-top: 10px;
 }
 
 .registration .form-control input,
 .login .form-control input {
-  border: 1px solid #f0f0f0;
+  border: 2px solid #f0f0f0;
   margin-bottom: 5px;
   border-radius: 4px;
   display: block;
@@ -548,6 +562,7 @@ ul {
 .login .form-control.error small {
   visibility: visible;
 }
+
 .registration button,
 .login button {
   cursor: pointer;
@@ -556,14 +571,16 @@ ul {
   padding: 5px;
   font-size: 16px;
   margin-top: 20px;
-  width: 100%;
+  width: 40%;
   display: block;
   letter-spacing: 1px;
 }
+
 .registration button:focus,
 .login button:focus {
   outline: none;
 }
+
 .registration button[type="submit"],
 .login button[type="submit"] {
   background: #218bab;
