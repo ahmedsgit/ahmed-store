@@ -1,14 +1,20 @@
 const hamburger_menu = document.querySelector(".hamburger-menu");
 const container = document.querySelector(".container");
+const hamburgerMenu = document.querySelector(".hamburger-menu");
 const subLink = document.getElementById('sub-link');
 const navHome = document.getElementById('nav-home');
 
 const bar = document.querySelector('.bar');
 const popup = document.querySelector('.popup');
 const main = document.getElementById('main');
+const loading = document.getElementById('loading');
+
 const mainContainer = document.getElementById('main-container');
 const notification = document.getElementById('notification-container');
 
+// developers
+const developersProfile = document.getElementById('developers-profile');
+const developersBtn = document.getElementById('developers-btn');
 
 // theme
 const theme = document.querySelector('.theme');
@@ -214,6 +220,12 @@ function checkValidUser(userName, password) {
     for (const item of data) {
         if (item.username === userName.value && item.password === password.value)
             mainContainer.style.display = 'none';
+        loading.style.display = "flex";
+        hamburgerMenu.style.display = "none";
+        setTimeout(() => {
+            loading.style.display = "none";
+            hamburgerMenu.style.display = "flex";
+        }, 4000);
     }
     subLink.classList.remove("active");
 }
@@ -292,3 +304,6 @@ popupRegistration.addEventListener('submit', () => {
     storeData();
 });
 popupLogin.addEventListener('submit', login);
+developersBtn.addEventListener("click", () => {
+    developersProfile.style.display = 'grid';
+})
