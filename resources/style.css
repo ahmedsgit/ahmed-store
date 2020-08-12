@@ -129,7 +129,7 @@ button {
 }
 
 .loading {
-  background: #4ea4b1;
+  background: #71b6c1;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -171,7 +171,7 @@ button {
   height: 200%;
   width: 200%;
   border-radius: 35%;
-  background: #4ea4b1;
+  background: #71b6c1;
   animation: spin 5s ease-in-out forwards;
 }
 
@@ -183,10 +183,7 @@ button {
   100% {
     transform: translateY(-100%) rotate(600deg);
   }
-
-
 }
-
 
 .main {
   position: relative;
@@ -431,7 +428,7 @@ ul {
 
 /* These are the delays */
 .developers img:nth-child(1) {
-  animation-delay: 0.0s;
+  animation-delay: 0s;
 }
 
 .developers img:nth-child(2) {
@@ -450,7 +447,6 @@ ul {
   animation-delay: 2s;
 }
 
-
 /* Animation definition */
 @keyframes pulse {
   50% {
@@ -458,7 +454,7 @@ ul {
   }
 }
 
-@media (max-width:1100px) {
+@media (max-width: 1100px) {
   .developers-profile {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -563,7 +559,7 @@ ul {
   }
 }
 
-.container.active .main:hover+.shadow.one {
+.container.active .main:hover + .shadow.one {
   transform: perspective(1300px) rotateY(20deg) translateZ(230px) scale(0.5);
 }
 
@@ -727,7 +723,6 @@ ul {
   border: 2px solid #186881;
   transition: all 0.3s ease;
 }
-
 
 .notification-container {
   background-color: rgba(0, 0, 0, 0.3);
