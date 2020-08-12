@@ -25,21 +25,24 @@ button {
   position: relative;
 }
 
-.container.orca {
+.container.orca,
+.container.orca .notification-container.show {
   background: #44a08d;
   background: -webkit-linear-gradient(to right, #093637, #44a08d);
   background: linear-gradient(to right, #093637, #44a08d);
   font-family: "Open Sans Condensed", sans-serif;
 }
 
-.container.theBlueLagoon {
+.container.theBlueLagoon,
+.container.theBlueLagoon .notification-container.show {
   background: #43c6ac;
   background: -webkit-linear-gradient(to right, #191654, #43c6ac);
   background: linear-gradient(to right, #191654, #43c6ac);
   font-family: "Chilanka", cursive;
 }
 
-.container.deepSeaSpace {
+.container.deepSeaSpace,
+.container.deepSeaSpace .notification-container.show {
   background: #2c3e50;
   background: -webkit-linear-gradient(to right, #4ca1af, #2c3e50);
   background: linear-gradient(to right, #4ca1af, #2c3e50);
@@ -430,7 +433,7 @@ ul {
   }
 }
 
-.container.active .main:hover + .shadow.one {
+.container.active .main:hover+.shadow.one {
   transform: perspective(1300px) rotateY(20deg) translateZ(230px) scale(0.5);
 }
 
@@ -474,6 +477,7 @@ ul {
   box-shadow: 0 2px 7px rgba(43, 110, 80, 0.7);
   border-radius: 5px;
   padding: 35px 30px;
+  animation: appear 0.5s forwards ease;
 }
 
 .registration h2,
@@ -592,4 +596,24 @@ ul {
   background: #186881;
   border: 2px solid #186881;
   transition: all 0.3s ease;
+}
+
+
+.notification-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 300px;
+  border-radius: 10px 10px 0 0;
+  padding: 15px 20px;
+  position: absolute;
+  bottom: -50px;
+  translate: transform 0.5s ease-in-out;
+}
+
+.notification-container p {
+  margin: 0;
+  text-align: center;
+}
+
+.notification-container.show {
+  transform: translateY(-50px);
 }

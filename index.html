@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="container">
         <div class="navbar">
             <div class="menu">
                 <h3 class="logo" id="logo">
@@ -27,8 +27,8 @@
             </div>
         </div>
 
-        <div class="main-container">
-            <div class="main">
+        <div class="main-container" id="main-container">
+            <div class="main" id="main">
                 <header>
                     <div class="overlay">
                         <div class="inner">
@@ -85,6 +85,9 @@
                             </div>
                             <button type="submit">Login</button>
                         </form>
+                        <div class="notification-container" id="notification-container">
+                            <p id="notification-message">message</p>
+                        </div>
                     </div>
                 </header>
             </div>
@@ -95,7 +98,7 @@
 
         <div class="links">
             <ul>
-                <li> <a href="#" style="--i: 0.05s;">Home</a></li>
+                <li> <a href="index.html" style="--i: 0.05s;">Home</a></li>
                 <li><a href="#" style="--i: 0.1s;">Apps Store</a></li>
                 <li> <a href="#" style="--i: 0.15s;">Developers</a> </li>
                 <li> <a href="#" style="--i: 0.2s;">Your Upload</a> </li>
@@ -109,6 +112,7 @@
                 </li>
             </ul>
         </div>
+        <div class="apps-page"></div>
     </div>
 
 
